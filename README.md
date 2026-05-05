@@ -15,3 +15,17 @@ Pastikan Anda sudah menginstal Python (disarankan versi 3.8 - 3.11).
 3. Instal library yang dibutuhkan dengan perintah:
    ```bash
    pip install -r requirements.txt
+
+## Cara Pengunaan
+1. Siapkan 4 titik patokan (misal: stiker warna terang) di 4 sudut meja kerja Anda membentuk persegi panjang.
+2. Ukur jarak asli antar titik tersebut menggunakan meteran.
+3. Buka file config.py, lalu ubah nilai REAL_WIDTH_CM dan REAL_HEIGHT_CM sesuai dengan hasil pengukuran Anda.
+4. Jalankan aplikasi: python main.py
+5. Klik **"Buka Foto"**, pilih foto meja yang ada mal-nya.
+6. Klik tepat pada 4 titik patokan di layar (urutan: Kiri-Atas, Kanan-Atas, Kanan-Bawah, Kiri-Bawah).
+7. Aplikasi otomatis akan meluruskan gambar dan menampilkan ukuran panjang x lebar mal Anda.
+
+## Struktur Direktori
+- `main.py`: Antarmuka grafis (GUI) utama aplikasi.
+- `config.py`: Tempat mengatur ukuran asli meja dan pengaturan lainnya.
+- `utils/transform.py`: Algoritma AI untuk mengoreksi kemiringan (Warp Perspective).
